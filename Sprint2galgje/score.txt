@@ -1,0 +1,10 @@
+Naam: Julius, Woord: boek, Geraden: True, Pogingen: 4, Datum: 2024-09-05 14:40:12
+Naam: Julius hoor!, Woord: fiets, Geraden: True, Pogingen: 5, Datum: 2024-09-05 14:52:10
+Naam: Pleunes!, Woord: klimatologie, Geraden: True, Pogingen: 10, Datum: 2024-09-05 14:54:19
+Naam: Juliuss, Woord: programmeren, Geraden: True, Pogingen: 14, Datum: 2024-09-05 14:55:42
+Naam: Penis, Woord: klimatologie, Geraden: True, Pogingen: 7, Datum: 2024-09-05 20:50:18
+Naam: Julius, Woord: stoel, Geraden: True, Pogingen: 6, Datum: 2024-09-05 21:18:42
+Naam: Juliussander, Woord: programmeren, Geraden: True, Pogingen: 14, Datum: 2024-09-05 21:19:48
+Naam: Julius, Woord: fiets, Geraden: True, Aantal pogingen: 7, Datum: 2024-09-05 21:37:43
+Naam: jls, Woord: boek, Geraden: True, Aantal pogingen: 6, Datum: 2024-09-05 21:38:18
+Naam: noms wask, Woord: stoel, Geraden: True, Aantal pogingen: 5, Datum: 2024-09-06 20:52:28
