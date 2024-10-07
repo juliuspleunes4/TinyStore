@@ -1,6 +1,6 @@
 import csv
 import os
-from colorama import Fore, init # https://pypi.org/project/colorama/
+from colorama import Fore, init # https://pypi.org/project/colorama/ (voor kleur in de terminal)
 from datetime import datetime
 
 # https://earthly.dev/blog/csv-python/
@@ -11,6 +11,7 @@ if not os.path.exists(CSV_FILENAME):
         writer = csv.writer(file)
         writer.writerow(['datum', 'tekst'])
 
+# https://docs.python.org/3/tutorial/controlflow.html#defining-functions
 def vraag_wachtwoord():
     wachtwoord = "geheim"
     while True:
@@ -21,6 +22,7 @@ def vraag_wachtwoord():
         else:
             print(Fore.RED + "Onjuist wachtwoord. Probeer het opnieuw.")
 
+# vraagt aan de user voor welke datum hij/zij een nieuwe entry wilt maken
 def vraag_datum():
     keuze = input(Fore.LIGHTBLUE_EX +"Wil je een actie uitvoeren voor vandaag (ja/nee)? ")
     if keuze.lower() == 'ja':
@@ -29,11 +31,13 @@ def vraag_datum():
         datum = input(Fore.LIGHTBLUE_EX + "Voer een datum in (YYYY-MM-DD): ")
         return datum
 
+# hier wordt gedefinierd welke data op welke manier wordt geschreven in het bestand
 def schrijf_tekst(datum):
     with open(CSV_FILENAME, mode='r', newline='') as file:
         reader = csv.DictReader(file)
         bestaande_data = {row['datum']: row['tekst'] for row in reader}
 
+# welke actie moet worden uitgevoerd als er al data staat voor gegeven datum
     if datum in bestaande_data:
         keuze = input(Fore.CYAN + "Er bestaat al een tekst voor deze datum. Wil je de tekst herschrijven (ja) of aanvullen (nee)? ")
         if keuze.lower() == 'ja':
@@ -51,6 +55,7 @@ def schrijf_tekst(datum):
         for d, t in bestaande_data.items():
             writer.writerow([d, t])
 
+# geeft de gebruiker de al geschreven tekst
 def lees_tekst(datum):
     with open(CSV_FILENAME, mode='r', newline='') as file:
         reader = csv.DictReader(file)
@@ -74,4 +79,4 @@ def main():
 
 
 if __name__ == "__main__":
-    main() # Wordt uitgevoerd via de main.py
+    main() # (deze functie wordt aangeroepen via de TinyStore)

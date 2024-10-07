@@ -6,63 +6,64 @@ from colorama import Fore, init  # https://pypi.org/project/colorama/
 
 # https://docs.python.org/3/tutorial/index.html
 
-# Initieer colorama
-init()
+init() # start colorama
 
-# Bestanden voor gebruikers en wachtwoorden
+# bestand voor accounts
 USERS_FILE = 'users.json'
 
-# Controleer of het users-bestand bestaat, anders maak het aan
+# controleer of het users-bestand bestaat (anders maak het aan)
 if not os.path.exists(USERS_FILE):
     with open(USERS_FILE, 'w') as file:
         json.dump({}, file)
 
-
-# Functie om een wachtwoord te hashen
+# https://stackoverflow.com/questions/62527331/what-does-hexdigest-do-in-python
+# https://docs.python.org/3/tutorial/controlflow.html#defining-functions
+# functie om een wachtwoord te hashen
 def hash_wachtwoord(wachtwoord):
     return hashlib.sha256(wachtwoord.encode()).hexdigest()
 
 
-# Functie om een nieuwe gebruiker aan te maken
+# functie om een nieuwe gebruiker aan te maken
 def nieuwe_gebruiker():
-    while True:  # Blijf herhalen totdat een unieke gebruikersnaam wordt ingevoerd
-        print(Fore.LIGHTBLUE_EX + "Voer 'q' in om terug te gaan naar het inlogscherm.")
-        gebruikersnaam = input("Kies een gebruikersnaam: ").lower()  # Niet hoofdlettergevoelig
+    while True:  # blijft herhalen totdat een unieke gebruikersnaam wordt ingevoerd door user
+        print(Fore.LIGHTBLUE_EX + "Voer 'q' in om terug te gaan naar het inlogscherm.") # als user bijv wilt inloggen en verkeerd typte
+        gebruikersnaam = input("Kies een gebruikersnaam: ").lower()  # .lower zorgt dat het niet hoofdlettergevoelig is
 
         if gebruikersnaam == 'q':
             print(Fore.YELLOW + "Terug naar het inlogscherm...")
-            return False  # Terug naar het inlogscherm
+            return False  # terug naar het inlogscherm als gebruiker "q" typt
 
         wachtwoord = input("Kies een wachtwoord: ")
-        wachtwoord_hash = hash_wachtwoord(wachtwoord)
+        wachtwoord_hash = hash_wachtwoord(wachtwoord) # hasht het wachtwoord zodat het veiliger is opgeslagen
 
         with open(USERS_FILE, 'r+') as file:
             users = json.load(file)
-            if gebruikersnaam in users:
+            if gebruikersnaam in users: # gebruikersnaam is al bezet
                 print(Fore.RED + "Gebruikersnaam bestaat al. Probeer een andere.")
             else:
                 users[gebruikersnaam] = wachtwoord_hash
                 file.seek(0)
                 json.dump(users, file)
                 print(Fore.GREEN + "Gebruiker succesvol aangemaakt.")
-                return True  # Stop met vragen zodra de gebruiker succesvol is aangemaakt
+                return True  # stop met vragen zodra account succesvol is aangemaakt
 
 
-# Functie om in te loggen
+# functie om in te loggen als gebruiker al account heeft
 def login(automatisch=False, gebruikersnaam=None):
     if automatisch:
         print(Fore.GREEN + "Automatisch ingelogd na het aanmaken van een account.")
-        # Hier wordt geen wachtwoord gevraagd, omdat het een automatische login is
+        # hier wordt geen wachtwoord gevraagd, omdat het een automatische login is nadat gebruiker account had gemaakt
     else:
-        gebruikersnaam = input("Gebruikersnaam: ").lower()  # Niet hoofdlettergevoelig
+        gebruikersnaam = input("Gebruikersnaam: ").lower()  # .lower zorgt dat het niet hoofdlettergevoelig is
 
+    # als user ongeldige gebruikersnaam invoert
     with open(USERS_FILE, 'r') as file:
         users = json.load(file)
         if gebruikersnaam not in users:
             print(Fore.RED + "Gebruiker bestaat niet.")
             return False
 
-    # Wachtwoord vragen en blijven vragen tot het correct is
+    # wachtwoord vragen en blijven vragen tot het correct is
     while True:
         if not automatisch:
             wachtwoord = input("Wachtwoord: ")
@@ -73,17 +74,17 @@ def login(automatisch=False, gebruikersnaam=None):
             else:
                 print(Fore.RED + "Onjuist wachtwoord. Probeer het opnieuw.")
         else:
-            # Automatisch inloggen na aanmaken account
+            # automatisch inloggen na aanmaken account
             return True
 
 
-# Functie voor het dagboekspel
+# functie voor het oproepen van het dagboekspel
 def dagboek_spel():
     from Sprint2dagboek.Sprint2dagboek import main as dagboek_main
     dagboek_main()
 
 
-# Toon het hoofdmenu
+# toon het hoofdmenu
 def toon_menu():
     print(Fore.LIGHTCYAN_EX + """
 ██╗    ██╗███████╗██╗     ██╗  ██╗ ██████╗ ███╗   ███╗    ██████╗ ██╗     ██╗                                                                     
@@ -109,7 +110,7 @@ def toon_menu():
     return keuze
 
 
-# Hoofdprogramma4
+# hoofdprogrammaq
 
 def main():
     print(Fore.LIGHTCYAN_EX + """
@@ -129,10 +130,11 @@ def main():
     """)
     keuze = input(Fore.LIGHTBLUE_EX + "Ben je een nieuwe gebruiker (1) of wil je inloggen (2)? Voer 1 of 2 in: ")
 
+    # https://stackoverflow.com/questions/4383571/importing-files-from-different-folder
     if keuze == '1':
-        if nieuwe_gebruiker():  # Controleert of de gebruiker succesvol is aangemaakt
+        if nieuwe_gebruiker():  # controleert of de gebruiker succesvol is aangemaakt
             gebruikersnaam = input(
-                "Herhaal je gebruikersnaam om automatisch in te loggen: ").lower()  # Niet hoofdlettergevoelig
+                "Herhaal je gebruikersnaam om automatisch in te loggen: ").lower()  # .lower zorgt dat het niet hoofdlettergevoelig is
             login(automatisch=True, gebruikersnaam=gebruikersnaam)
             while True:
                 keuze = toon_menu()
@@ -150,7 +152,7 @@ def main():
                 else:
                     print(Fore.RED + "Ongeldige invoer, probeer het opnieuw.")
         else:
-            main()  # Als de gebruiker 'q' invoert, terug naar het hoofdmenu (inlogscherm)
+            main()  # Als de user "q" invoert ga terug naar de hoofdmenu (inlogscherm)
 
     elif keuze == '2':
         if login():

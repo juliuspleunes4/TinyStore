@@ -4,7 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2068182c-c768-4e8f-a3aa-95ff487a56c1" name="Changes" comment="Overzicht gemaakt. Eerst stond dit project naast al mijn andere bestanden in 1 project file. Dit project is nu geisoleerd." />
+    <list default="true" id="2068182c-c768-4e8f-a3aa-95ff487a56c1" name="Changes" comment="Score bestand toegevoegd aan de repository.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sprint1/sprint1.py" beforeDir="false" afterPath="$PROJECT_DIR$/Sprint1/sprint1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sprint2dagboek/Sprint2dagboek.py" beforeDir="false" afterPath="$PROJECT_DIR$/Sprint2dagboek/Sprint2dagboek.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sprint2galgje/galgje.py" beforeDir="false" afterPath="$PROJECT_DIR$/Sprint2galgje/galgje.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main2.py" beforeDir="false" afterPath="$PROJECT_DIR$/main2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users.json" beforeDir="false" afterPath="$PROJECT_DIR$/users.json" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -20,12 +27,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/juliuspleunes4/TinyStore.git",
-    "accountId": "f80fe4e1-89b1-468e-bff5-36e26d3b8f89"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;juliuspleunes4&quot;
   }
-}]]></component>
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/juliuspleunes4/TinyStore.git&quot;,
+    &quot;accountId&quot;: &quot;f80fe4e1-89b1-468e-bff5-36e26d3b8f89&quot;
+  }
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 4
 }</component>
@@ -35,20 +48,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.main2.executor": "Run",
-    "Python.sprint1.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.main2.executor&quot;: &quot;Debug&quot;,
+    &quot;Python.sprint1.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\juliu\PycharmProjects\TinyStore" />
@@ -71,7 +84,9 @@
       <option name="presentableId" value="Default" />
       <updated>1727686348767</updated>
       <workItem from="1727686350941" duration="298000" />
-      <workItem from="1727686973613" duration="555000" />
+      <workItem from="1727686973613" duration="1696000" />
+      <workItem from="1727940085031" duration="4000" />
+      <workItem from="1728282989092" duration="2745000" />
     </task>
     <task id="LOCAL-00001" summary="Overzicht gemaakt. Eerst stond dit project naast al mijn andere bestanden in 1 project file. Dit project is nu geisoleerd.">
       <option name="closed" value="true" />
@@ -81,7 +96,15 @@
       <option name="project" value="LOCAL" />
       <updated>1727687332123</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Score bestand toegevoegd aan de repository.">
+      <option name="closed" value="true" />
+      <created>1727687766803</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1727687766803</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -89,10 +112,11 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Overzicht gemaakt. Eerst stond dit project naast al mijn andere bestanden in 1 project file. Dit project is nu geisoleerd." />
-    <option name="LAST_COMMIT_MESSAGE" value="Overzicht gemaakt. Eerst stond dit project naast al mijn andere bestanden in 1 project file. Dit project is nu geisoleerd." />
+    <MESSAGE value="Score bestand toegevoegd aan de repository." />
+    <option name="LAST_COMMIT_MESSAGE" value="Score bestand toegevoegd aan de repository." />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/TinyStore$main2.coverage" NAME="main2 Coverage Results" MODIFIED="1727687182510" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/TinyStore$sprint1.coverage" NAME="sprint1 Coverage Results" MODIFIED="1727687055936" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Sprint1" />
+    <SUITE FILE_PATH="coverage/TinyStore$main2.coverage" NAME="main2 Coverage Results" MODIFIED="1727687864463" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/TinyStore$sprint1.coverage" NAME="sprint1 Coverage Results" MODIFIED="1728283357689" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Sprint1" />
   </component>
 </project>
