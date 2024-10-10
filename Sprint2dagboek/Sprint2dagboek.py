@@ -4,7 +4,7 @@ from colorama import Fore, init # https://pypi.org/project/colorama/ (voor kleur
 from datetime import datetime
 
 # https://docs.python.org/3/tutorial/controlflow.html#defining-functions
-# vraagt aan de user voor welke datum hij/zij een nieuwe entry wilt maken
+# vraagt aan de user voor welke datum hij/zij/watdanook een nieuwe entry wilt maken
 def vraag_datum():
     keuze = input(Fore.LIGHTBLUE_EX +"Wil je een actie uitvoeren voor vandaag (ja/nee)? ")
     if keuze.lower() == 'ja':
@@ -13,7 +13,7 @@ def vraag_datum():
         datum = input(Fore.LIGHTBLUE_EX + "Voer een datum in (YYYY-MM-DD): ")
         return datum
 
-# hier wordt gedefinierd welke data op welke manier wordt geschreven in het bestand
+# hier wordt gedefinierd welke data op welkemanier wordt geschreven in het bestand
 def schrijf_tekst(datum):
     with open(CSV_FILENAME, mode='r', newline='') as file:
         reader = csv.DictReader(file)

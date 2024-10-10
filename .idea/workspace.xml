@@ -4,13 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2068182c-c768-4e8f-a3aa-95ff487a56c1" name="Changes" comment="Extra notities voor mezelf toegevoegd. Ik moet vaak op internet terug kijken hoe bepaalde functies ook al weer precies werken. Deze notities helpen mij bij het verder bouwen van mijn coden, wanneer ik bepaalde functies opnieuw moet gebruiken">
+    <list default="true" id="2068182c-c768-4e8f-a3aa-95ff487a56c1" name="Changes" comment="Dagboek bug gefixt. Eerst had ik constant het probleem dat alle dagboek entry's werden opgeslagen op 1 plek waar elk account bij kon. Nu wordt elke entry per account individueel veilig opgeslagen.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Sprint2dagboek/Sprint2dagboek.py" beforeDir="false" afterPath="$PROJECT_DIR$/Sprint2dagboek/Sprint2dagboek.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main2.py" beforeDir="false" afterPath="$PROJECT_DIR$/main2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/score.txt" beforeDir="false" afterPath="$PROJECT_DIR$/score.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users.json" beforeDir="false" afterPath="$PROJECT_DIR$/users.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,7 +84,7 @@
       <workItem from="1727686973613" duration="1696000" />
       <workItem from="1727940085031" duration="4000" />
       <workItem from="1728282989092" duration="3892000" />
-      <workItem from="1728567448030" duration="3974000" />
+      <workItem from="1728567448030" duration="4588000" />
     </task>
     <task id="LOCAL-00001" summary="Overzicht gemaakt. Eerst stond dit project naast al mijn andere bestanden in 1 project file. Dit project is nu geisoleerd.">
       <option name="closed" value="true" />
@@ -113,7 +110,15 @@
       <option name="project" value="LOCAL" />
       <updated>1728285884384</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Dagboek bug gefixt. Eerst had ik constant het probleem dat alle dagboek entry's werden opgeslagen op 1 plek waar elk account bij kon. Nu wordt elke entry per account individueel veilig opgeslagen.">
+      <option name="closed" value="true" />
+      <created>1728571533279</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1728571533279</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -123,7 +128,8 @@
     <MESSAGE value="Overzicht gemaakt. Eerst stond dit project naast al mijn andere bestanden in 1 project file. Dit project is nu geisoleerd." />
     <MESSAGE value="Score bestand toegevoegd aan de repository." />
     <MESSAGE value="Extra notities voor mezelf toegevoegd. Ik moet vaak op internet terug kijken hoe bepaalde functies ook al weer precies werken. Deze notities helpen mij bij het verder bouwen van mijn coden, wanneer ik bepaalde functies opnieuw moet gebruiken" />
-    <option name="LAST_COMMIT_MESSAGE" value="Extra notities voor mezelf toegevoegd. Ik moet vaak op internet terug kijken hoe bepaalde functies ook al weer precies werken. Deze notities helpen mij bij het verder bouwen van mijn coden, wanneer ik bepaalde functies opnieuw moet gebruiken" />
+    <MESSAGE value="Dagboek bug gefixt. Eerst had ik constant het probleem dat alle dagboek entry's werden opgeslagen op 1 plek waar elk account bij kon. Nu wordt elke entry per account individueel veilig opgeslagen." />
+    <option name="LAST_COMMIT_MESSAGE" value="Dagboek bug gefixt. Eerst had ik constant het probleem dat alle dagboek entry's werden opgeslagen op 1 plek waar elk account bij kon. Nu wordt elke entry per account individueel veilig opgeslagen." />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/TinyStore$main2.coverage" NAME="main2 Coverage Results" MODIFIED="1728571281117" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
