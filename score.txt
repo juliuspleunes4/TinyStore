@@ -1,1 +1,5 @@
 Naam: Leon, Woord: dorp, Geraden: False, Aantal pogingen: 0, Datum: 2024-09-30 11:06:05
+Naam: bitches, Woord: plant, Geraden: True, Aantal pogingen: 1, Datum: 2024-10-10 16:34:50
+Naam: BItCHLOOS, Woord: klok, Geraden: False, Aantal pogingen: 0, Datum: 2024-10-10 16:39:25
+Naam: pleuntje, Woord: regen, Geraden: False, Aantal pogingen: 0, Datum: 2024-10-10 16:39:54
+Naam: julius, Woord: boot, Geraden: True, Aantal pogingen: 2, Datum: 2024-10-10 16:41:54

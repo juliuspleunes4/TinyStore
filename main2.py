@@ -8,6 +8,8 @@ from colorama import Fore, init  # https://pypi.org/project/colorama/
 
 init() # start colorama
 
+huidige_gebruiker = None
+
 # bestand voor accounts
 USERS_FILE = 'users.json'
 
@@ -61,7 +63,7 @@ def login(automatisch=False, gebruikersnaam=None):
         users = json.load(file)
         if gebruikersnaam not in users:
             print(Fore.RED + "Gebruiker bestaat niet.")
-            return False
+            return False, None
 
     # wachtwoord vragen en blijven vragen tot het correct is
     while True:
@@ -70,18 +72,18 @@ def login(automatisch=False, gebruikersnaam=None):
             wachtwoord_hash = hash_wachtwoord(wachtwoord)
             if users[gebruikersnaam] == wachtwoord_hash:
                 print(Fore.GREEN + "Inloggen succesvol.")
-                return True
+                return True, gebruikersnaam
             else:
                 print(Fore.RED + "Onjuist wachtwoord. Probeer het opnieuw.")
         else:
             # automatisch inloggen na aanmaken account
-            return True
+            return True, gebruikersnaam
 
 
 # functie voor het oproepen van het dagboekspel
-def dagboek_spel():
+def dagboek_spel(gebruiker):
     from Sprint2dagboek.Sprint2dagboek import main as dagboek_main
-    dagboek_main()
+    dagboek_main(gebruiker)
 
 
 # toon het hoofdmenu
@@ -135,7 +137,9 @@ def main():
         if nieuwe_gebruiker():  # controleert of de gebruiker succesvol is aangemaakt
             gebruikersnaam = input(
                 "Herhaal je gebruikersnaam om automatisch in te loggen: ").lower()  # .lower zorgt dat het niet hoofdlettergevoelig is
-            login(automatisch=True, gebruikersnaam=gebruikersnaam)
+            succes, gebruikersnaam = login(automatisch=True, gebruikersnaam=gebruikersnaam)
+            if succes:
+                huidige_gebruiker = gebruikersnaam
             while True:
                 keuze = toon_menu()
                 if keuze == '1':
@@ -145,7 +149,7 @@ def main():
                     from Sprint2galgje.galgje import galgje
                     galgje()
                 elif keuze == '3':
-                    dagboek_spel()
+                    dagboek_spel(huidige_gebruiker)
                 elif keuze == '4':
                     print(Fore.GREEN + "Bedankt voor het gebruiken van TinyStore by Julius. Tot ziens!")
                     sys.exit()
@@ -155,7 +159,9 @@ def main():
             main()  # Als de user "q" invoert ga terug naar de hoofdmenu (inlogscherm)
 
     elif keuze == '2':
-        if login():
+            succes, gebruikersnaam = login()
+            if succes:
+                huidige_gebruiker = gebruikersnaam
             while True:
                 keuze = toon_menu()
                 if keuze == '1':
@@ -165,7 +171,7 @@ def main():
                     from Sprint2galgje.galgje import galgje
                     galgje()
                 elif keuze == '3':
-                    dagboek_spel()
+                    dagboek_spel(huidige_gebruiker)
                 elif keuze == '4':
                     print(Fore.GREEN + "Bedankt voor het gebruiken van TinyStore by Julius. Tot ziens!")
                     sys.exit()

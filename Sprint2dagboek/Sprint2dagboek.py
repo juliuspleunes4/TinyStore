@@ -3,25 +3,7 @@ import os
 from colorama import Fore, init # https://pypi.org/project/colorama/ (voor kleur in de terminal)
 from datetime import datetime
 
-# https://earthly.dev/blog/csv-python/
-CSV_FILENAME = 'dagboek.csv'
-
-if not os.path.exists(CSV_FILENAME):
-    with open(CSV_FILENAME, mode='w', newline='') as file:
-        writer = csv.writer(file)
-        writer.writerow(['datum', 'tekst'])
-
 # https://docs.python.org/3/tutorial/controlflow.html#defining-functions
-def vraag_wachtwoord():
-    wachtwoord = "geheim"
-    while True:
-        invoer = input(Fore.LIGHTBLUE_EX + "Voer het wachtwoord in om toegang te krijgen tot het dagboek: ")
-        if invoer == wachtwoord:
-            print(Fore.GREEN + "Wachtwoord correct, toegang verleend.")
-            break
-        else:
-            print(Fore.RED + "Onjuist wachtwoord. Probeer het opnieuw.")
-
 # vraagt aan de user voor welke datum hij/zij een nieuwe entry wilt maken
 def vraag_datum():
     keuze = input(Fore.LIGHTBLUE_EX +"Wil je een actie uitvoeren voor vandaag (ja/nee)? ")
@@ -65,8 +47,18 @@ def lees_tekst(datum):
                 return
         print(Fore.RED + f"Geen tekst gevonden voor {datum}")
 
-def main():
-    vraag_wachtwoord()
+CSV_FILENAME = None
+
+def main(gebruiker):
+    global CSV_FILENAME
+    CSV_FILENAME = f'dagboek_{gebruiker}.csv'
+
+    # https://earthly.dev/blog/csv-python/
+    if not os.path.exists(CSV_FILENAME):
+        with open(CSV_FILENAME, mode='w', newline='') as file:
+            writer = csv.writer(file)
+            writer.writerow(['datum', 'tekst'])
+
     datum = vraag_datum()
 
     actie = input(Fore.LIGHTBLUE_EX + "Wil je lezen (1) of schrijven (2)? Voer 1 of 2 in: ")

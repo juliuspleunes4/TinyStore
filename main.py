@@ -1,6 +1,8 @@
 import sys
 from colorama import Fore, init  # https://pypi.org/project/colorama/
 
+# LET OP!! DIT IS DE VEROUDERDE VERSIE! GEBRUIK MAIN2.PY!!!
+
 
 # https://docs.python.org/3/tutorial/index.html
 
