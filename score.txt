@@ -3,3 +3,7 @@ Naam: bitches, Woord: plant, Geraden: True, Aantal pogingen: 1, Datum: 2024-10-1
 Naam: BItCHLOOS, Woord: klok, Geraden: False, Aantal pogingen: 0, Datum: 2024-10-10 16:39:25
 Naam: pleuntje, Woord: regen, Geraden: False, Aantal pogingen: 0, Datum: 2024-10-10 16:39:54
 Naam: julius, Woord: boot, Geraden: True, Aantal pogingen: 2, Datum: 2024-10-10 16:41:54
+Naam: Stephan, Woord: wandeltocht, Geraden: True, Aantal pogingen: 4, Datum: 2024-10-14 09:30:42
+Naam: alara, Woord: dier, Geraden: False, Aantal pogingen: 0, Datum: 2024-10-14 09:41:29
+Naam: kuzma, Woord: logaritme, Geraden: False, Aantal pogingen: 0, Datum: 2024-10-14 09:47:18
+Naam: leo, Woord: dier, Geraden: True, Aantal pogingen: 1, Datum: 2024-10-14 10:13:47
